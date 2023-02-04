@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<style>
+.ac {
+	list-style: none;
+	color: #131313;
+}
+
+.ac .ac-parent {
+	display: flex;
+	justify-content: space-between;
+	transition: transform 0.4s;
+}
+
+.ac .ac-child {
+	margin: 0;
+	display: none;
+}
+
+.ac .ac-item {
+	border-bottom: 1px solid #d7d7d7;
+}
+
+</style>
+
+<dl class="ac">
+	<div class="ac-item">
+		<dt class="ac-parent">Q. Lorem ipsum dolor sit amet, consectetur adipiscing elit?<span class="icon">▼</span></dt>
+		<dd class="ac-child">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</dd>
+	</div>
+	<div class="ac-item">
+		<dt class="ac-parent">Q. Lorem ipsum dolor sit amet, consectetur adipiscing elit?<span class="icon">▼</span></dt>
+		<dd class="ac-child">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</dd>
+	</div>
+</dl>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script>
+	$(function(){
+		$('.ac-parent').on('click', function(){
+			$(this).next().slideToggle();
+		});
+	});
+</script>
